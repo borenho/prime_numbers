@@ -14,3 +14,6 @@ class CheckPrimeTestCase(unittest.TestCase):
     def test_n_is_integer(self):
         with self.assertRaises(TypeError):
             is_prime('10')
+
+    def test_n_is_greater_than_one(self):
+        self.assertGreater(1, 1, 'N should be greater than ONE')
