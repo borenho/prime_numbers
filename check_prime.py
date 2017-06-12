@@ -1,3 +1,7 @@
+import time
+
+start_time = time.time()
+
 def is_prime(n):
     """ Checks for prime nos within a range """
 
@@ -9,5 +13,7 @@ def is_prime(n):
                     break
             else:
                 primes.append(num)
-    
+
     return primes
+
+time_taken = time.time() - start_time
