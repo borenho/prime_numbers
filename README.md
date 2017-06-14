@@ -1,2 +1,2 @@
 # prime_numbers
-Converts temperature from Celsius to Fahreheit
+Finds prime numbers from 0 to n
