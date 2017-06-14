@@ -16,7 +16,7 @@ class CheckPrimeTestCase(unittest.TestCase):
             is_prime('10')
 
     def test_n_is_greater_than_one(self):
-        self.assertGreater(2, 1, 'N should be greater than ONE')
+        self.assertGreater(2, 1, 'n should be greater than 1')
 
     def test_n_is_actually_included(self):
         self.assertIn(11, is_prime(11))
