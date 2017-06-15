@@ -13,7 +13,7 @@ def is_prime(n):
                 if num % i == 0:
                     break
             else:
-                primes.append(num)
+                primes.append(num)                    
 
     # get execution time before function returns
     time_taken = time.time() - start_time

@@ -11,13 +11,16 @@ class CheckPrimeTestCase(unittest.TestCase):
         self.assertNotIn(4, is_prime(10))
         self.assertNotIn(9, is_prime(10))
 
-    def test_n_is_integer(self):
-        with self.assertRaises(TypeError):
+    def test_function_raises_exception_for_non_integer_params(self):
+        with self.assertRaises(TypeError) as context:
             is_prime('10')
+            self.assertEqual(
+                'Argument must be an integer',
+                context.exception.message, "Invalid input"
+                )
 
-    def test_n_is_greater_than_one(self):
-        self.assertGreater(2, 1, 'n should be greater than 1')
+    def test_is_prime_returns_list(self):
+        self.assertEqual(type(is_prime(10)), list, 'Function should return list')
 
-    def test_n_is_actually_included(self):
-        self.assertIn(11, is_prime(11))
-
+    def test_is_prime_returns_list_of_integers(self):
+        self.assertTrue(all (isinstance (n, int) for n in is_prime(10)), 'Function returns list of none integers')
